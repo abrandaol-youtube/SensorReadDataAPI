@@ -34,6 +34,7 @@ namespace SensorReadDataApi
             {
                 endpoints.MapGet("/", async context =>
                 {
+                    context.Response.Headers.Add("Content-Type", "text/html; charset=utf-8");
                     await context.Response.WriteAsync("Sensor Data Read API");
                 });
 
